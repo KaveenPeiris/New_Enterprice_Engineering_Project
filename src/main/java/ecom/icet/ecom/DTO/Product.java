@@ -1,4 +1,4 @@
-package ecom.icet.ecom.model;
+package ecom.icet.ecom.DTO;
 
 
 import lombok.Getter;
