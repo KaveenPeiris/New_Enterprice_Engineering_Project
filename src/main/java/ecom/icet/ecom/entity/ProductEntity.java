@@ -18,4 +18,15 @@ public class ProductEntity {
     private Double price;
     private boolean isActive;
 
+    public void setName(String name) {
+    }
+
+    public void setPrice(Double price) {
+    }
+
+    public void setDescription(String description) {
+    }
+
+    public void setActive(boolean active) {
+    }
 }
