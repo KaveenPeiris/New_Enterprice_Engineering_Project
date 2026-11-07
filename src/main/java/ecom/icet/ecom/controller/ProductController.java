@@ -2,6 +2,8 @@ package ecom.icet.ecom.controller;
 
 
 import ecom.icet.ecom.model.Product;
+import ecom.icet.ecom.service.ProductServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,11 +16,16 @@ import java.util.List;
 @RestController
 public class ProductController {
 
+
+    ProductServiceImpl service ;
+
+    ProductController(ProductServiceImpl service){
+        this.service = service;
+    }
     @PostMapping("/Product/Create")
     void createProduct(@RequestBody Product product){
-        System.out.println(product);
 
-
+    service.createProduct(product);
 
     }
     @GetMapping("/Product/All")
